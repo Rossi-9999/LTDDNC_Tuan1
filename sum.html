@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+    </div>
+    <script>
+         const body = document.getElementById("root");
+        
+        const ipa = document.createElement("input")    
+        ipa.setAttribute("id", "a")
+
+        const br = document.createElement("br")
+         
+        const ipb = document.createElement("input")
+        ipb.setAttribute("id", "b")
+
+        const btn = document.createElement("button")
+        btn.setAttribute("id","btn1")
+
+        const div1 = document.createElement("div")
+        div1.setAttribute("id","div1")
+        btn.innerHTML = "Sum"
+        
+        body.appendChild(ipa)
+        body.appendChild(br)
+        body.appendChild(ipb) 
+        body.appendChild(btn)
+        body.appendChild(div1)
+
+        const tinhtong = (a, b) => {
+            const kq = parseInt(a) + parseInt(b)
+            const k = document.getElementById("div1")
+            console.log(k)
+            body.appendChild(k)
+//          alert(kq)
+            k.appendChild(document.createElement("h3")).innerHTML = kq
+        }
+        btn.onclick = () => tinhtong(ipa.value, ipb.value)
+
+    </script>
+</body>
+</html>
